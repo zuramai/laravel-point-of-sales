@@ -1,0 +1,119 @@
+﻿.theme-cyan{
+
+    ::selection{
+        color: $white; 
+        background: $cyan;
+    }
+    .auth-main{
+        background: $cyan;
+    }
+    .sidebar-nav .metismenu{
+        >li{
+            &.active>a,
+            a:hover{
+                background: $cyan;
+                color: $white;
+            }
+            ul{
+                .active{
+                    a{
+                        color: $cyan;
+                        
+                    }
+                }
+            }
+        }
+        
+        ul a:hover{
+            &::before{
+                background: $cyan;
+            }
+        }
+        
+    }
+    .form-control{
+        &:focus {
+            color: $cyan;
+        }
+    }
+    .fancy-checkbox{
+        input[type="checkbox"] {    
+            &:checked + span:before {
+                color: $cyan;
+                border-color: $cyan;
+            }
+        }
+    }
+    .chat-widget{
+        li {
+            &.right {
+                
+                .chat-info {
+                    background: $cyan;
+                    color: $white;
+    
+                    &:before{
+                        border-left: 10px solid $cyan;
+                    }
+                }
+            }
+        }
+    }
+    .wizard{
+        >.steps{
+            .current a{
+                background: $cyan;
+            }
+            .done a{
+                background: $gray-500;
+            }
+        }        
+    }
+    .pagination{
+        >li{
+            >a{
+                color: $cyan;
+                &:hover{
+                    background: $cyan;
+                    border-color: $cyan; 
+                    color: $white;
+                }
+            }
+            >span{
+                color: $cyan;
+            }
+        }
+    }
+    .page-item.active .page-link{
+        background-color: $cyan;
+        border-color: $cyan;
+    }
+    .switch {
+        input:checked + .slider {
+            background-color: $cyan;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px $cyan;
+        }
+    }
+    .navbar-fixed-top #navbar-search .form-control{
+        &:focus,
+        &:active{
+            background: $white;
+            color: $cyan;
+        }
+    }
+    .navbar-fixed-top{
+        border-color: $cyan;
+    }
+    .sidebar_icon{
+        background: $cyan;
+    }
+    #left-sidebar{
+        border-color:  $cyan;
+    }
+    .navbar-nav .dropdown-menu li.header{
+        background: $cyan;
+    }
+}

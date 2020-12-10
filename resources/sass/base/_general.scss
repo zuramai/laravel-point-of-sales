@@ -1,0 +1,50 @@
+/* General Styles */
+body {
+    @include transition(all .3s ease-in-out);
+    background-color: $body-color;
+    font-weight: $font-weight-400;
+	font-family: $font-family;
+	font-size: $font-size;
+    color: $font-color;
+    letter-spacing: 0.3px;
+}
+a {
+	&:hover,
+	&:focus {
+		color: $link-color-hover;
+		text-decoration: none;
+	}
+}
+
+.overlay {
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($dark,0.5);
+    display: none;
+    z-index: 10;
+
+    &.open{
+        display: block;
+    }
+}
+
+
+@include max-screen($break-small - 1px){
+    .hidden-xs{
+		display: none;
+	}
+}
+@include max-screen($break-medium){
+    .hidden-sm{
+		display: none;
+	}
+}
+@include max-screen($break-1024){
+    .hidden-md{
+		display: none;
+	}
+}

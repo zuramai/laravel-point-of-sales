@@ -1,0 +1,33 @@
+.rightbar{
+    @include box-shadow(0 5px 10px 0px rgba($dark,.3));
+    @include transition(all .3s ease-in-out);
+    background: $white;
+    position: fixed;
+    right: -420px;
+    top: 0;
+    width: 340px;    
+    height: 100vh;
+    z-index: 13;
+    padding: 15px 20px;
+
+    @include max-screen($break-large) {
+        width: 280px;
+    }
+
+    &.open{
+        right: 0;
+    }
+    
+
+    .chat_detail{
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+        display: block;        
+        position: relative;        
+        
+        .input-group{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}

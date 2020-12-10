@@ -1,0 +1,192 @@
+/* sparkline chart */
+#jqstooltip {
+	background-color: $white;
+	border-color: #ddd;
+	color: $font-color;
+
+	.jqsfield {
+		color: $font-color;
+	}
+}
+
+/* chartist */
+$ct-series-colors: (
+	a: #36c2cf,
+	b: #5978ec,
+	c: #f66d9b,
+	d: #ff9f24,
+	e: #ab8ce4,
+	f: #d17905,
+	g: #453d3f,
+	h: #59922b,
+	i: #0544d3,
+	j: #6b0392,
+	k: #f05b4f,
+	l: #dda458,
+	m: #eacf7d,
+	n: #86797d,
+	o: #b2c326,
+);
+
+.ct-chart {
+	position: relative;
+}
+.ct-series {
+	.ct-line {
+		stroke-width: 2px;
+	}
+	.ct-bar {
+		stroke-width: 15px;
+	}
+	.ct-point {
+		stroke-width: 5px;
+		stroke-linecap: circle;
+	}
+}
+
+@each $series-name, $series-color in $ct-series-colors {
+	.ct-series-#{$series-name} {
+		.ct-line,
+		.ct-bar,
+		.ct-point {
+			stroke: $series-color;
+		}
+
+		.ct-area, 
+		.ct-slice-donut-solid, 
+		.ct-slice-pie,
+		.ct-bar {
+			fill: $series-color;
+		}
+	}
+}
+
+.chartist-tooltip {
+	@include border-radius(3px);
+	color: $white;
+	min-width: 3.5em;
+	background: $gray-500;	
+
+	&:before {
+		margin-left: -8px;
+		border-width: 8px;
+		border-top-color: $gray-500;
+	}
+}
+
+.ct-axis-title {
+	fill: $gray-400;
+}
+/* Top Products Chart */
+.ct-label {
+	@extend .font-12;
+	color: rgba($dark, 0.3);
+}
+.ct-grid{
+	stroke: rgba($dark, 0.05);
+}
+.ct-legend {
+	position: relative;	
+	z-index: 5;
+	text-align: right;
+	padding: 0;
+
+	li {
+		@include inline-block;
+		position: relative;
+		padding-left: 16px;
+		margin-bottom: 3px;
+		margin-right: 15px;
+		list-style-type: none;
+	}
+
+	li:before {
+		@include border-radius(2px);
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 5px;
+		left: 0;
+		content: '';
+		border: 3px solid transparent;
+	}
+
+	li.inactive:before {
+		background: transparent;
+	}
+
+	&.ct-legend-inside {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	$i: 0;
+	@each $series-name, $series-color in $ct-series-colors {
+		.ct-series-#{$i}:before {
+			background-color: $series-color;
+			border-color: $series-color;
+		}
+
+		$i: $i + 1;
+	}
+	stroke: rgba($dark, 0.1);
+}
+#pie-chart,
+#donut-chart{
+	.ct-label {	
+		fill: rgba($dark, 0.9);
+	}	
+}
+/* End Top Products Chart */
+.c3-chart-arc{
+	path{
+		stroke: $card-color;
+	}
+}
+.c3-line{
+	stroke-width: 1.5px;
+}
+
+/* Morris */
+.morris-hover {
+    &.morris-default-style {
+        @include border-radius(0);
+    }
+}
+/* Flot */
+.flot-chart {
+    width: 100%;
+    height: 320px;
+}
+.panel-switch-btn {
+    position: relative;
+    right: 20px;
+    z-index: 9;
+
+    label {
+        font-weight: bold !important;
+    }
+}
+.legendLabel {
+    width: 85px !important;
+    position: relative;
+    left: 3px;
+}
+#multiple_axis_chart {
+    .legendLabel {
+        width: 160px !important;
+    }
+}
+/* Sparkline */
+.sparkline {
+    text-align: center;
+}
+
+.dashboard-donut-chart{
+    width: 280px;
+    margin: 0 auto;
+}
+.flot-tick-label.tickLabel{
+	color: rgba($dark, 0.5);
+}

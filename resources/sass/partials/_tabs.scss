@@ -1,0 +1,103 @@
+.nav{
+    
+
+    &.nav-tabs{
+        border-color: $border-color;
+        .nav-item{
+            .nav-link{
+                color: $font-color;
+                &.active,
+                &:hover,
+                &:focus{
+                    background-color: $border-color;
+                    //color: $link-color;
+                    border-color: $border-color;
+                }
+            }
+        }        
+    }
+    &.nav-tabs2{
+        > li{
+
+            > a {
+                @include transition(all .3s ease-in-out);
+                @include border-radius(50px);
+                @extend .m-r-5;
+                color: $gray-500;
+                background-color: transparent;
+                padding: .5rem;
+                
+                &:hover,
+                &.active{
+                    padding: .5rem 1.5rem;
+                    color: $white;
+                    background: $color-primary;
+                }
+            }
+        }
+    }
+    &.nav-tabs3{
+        border-bottom: 1px solid $border-color;
+
+        > li{
+            margin-bottom: -1px; 
+
+            > a {
+                @include transition(all .3s ease-in-out);
+                @extend .m-r-5;
+                @extend .font-15;
+                color: $gray-400;
+                padding: 7px 20px;                
+                background-color: transparent;
+                border-bottom: transparent;
+                font-weight: $font-weight-400;
+            
+                &:hover,
+                &:focus {
+                    color: $link-color;
+                    border-bottom: 2px solid $link-color !important;
+                }
+                &.active{
+                    color: $link-color;
+                    border-bottom: 2px solid $link-color !important;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.tab-content{
+    @extend .m-t-15;
+    p{
+        font-size: $font-size;
+    }
+}
+
+.nav-pills{
+
+    > li{
+
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                background-color: $gray-50;
+                color: $font-color;
+            }
+        }
+
+        > a {
+            color: inherit;
+        }
+    }
+}
+
+.nav-tabs-colored > li.active > a {
+	&,
+	&:hover,
+	&:focus {
+		background-color: $gray-50;
+		color: $font-color;
+	}
+}

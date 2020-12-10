@@ -1,0 +1,148 @@
+/* Elements */
+.metric-inline {
+	@include border-radius(3px);
+	@extend .align-center;
+	padding: 20px;
+	font-size: 36px;
+	background-color: #f5f5f5;
+
+	i {
+		@include display-block;
+		margin-bottom: 12px;
+		color: $color-muted;
+	}
+	
+	span {
+		@include display-block;
+		font-size: 20px;
+	}
+}
+
+.separator-linethrough {
+	position: relative;
+	margin: 30px 0;
+	@extend .align-center;
+
+	span {
+        @include inline-block;
+        @extend .font-18;
+		padding: 0 10px;
+		position: inherit;
+		background-color: $card-color;
+		z-index: 9;
+	}
+
+	&:after {
+		@include display-block;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		content: '';
+		border-top: 1px solid $border-color;
+		z-index: 0;
+	}
+}
+
+.block-header{
+    @extend .m-b-15;
+    @extend .m-t-15;
+    padding: 0 15px;
+
+    @include max-screen($break-xsmall) {
+        .text-right{
+            text-align: left !important;
+        }
+    }
+
+	h2, h1{
+        @extend .font-22;
+        @extend .m-b-0;
+        line-height: 28px;
+        color: $dark;
+    }
+    
+	.breadcrumb{
+        @extend .padding-0;
+        @extend .m-b-0;
+        @extend .m-r-20;
+        @include inline-block;        
+        @extend .font-14;
+        background: transparent;
+
+        li{
+            @include inline-block;
+        }
+    }
+
+    .inlineblock{
+        @extend .m-t-5;
+    }
+}
+
+/* toastr notification */
+#toast-container {
+	> div {
+		@include opacity(1);
+		
+		&,
+		&:hover{
+			@include box-shadow(none);
+		}
+    }
+    .toast-close-button {
+        @include opacity(.3);    
+        top: -11px;
+        text-shadow: none;
+        color: $white;
+    
+        &:hover,
+        &:focus {
+            @include opacity(.5);
+        }
+    }    
+    .toast-info {
+        background-color: $color-accent;
+    
+        .toast-close-button {
+            color: darken($color-accent, 20%);
+        }
+    }    
+    .toast-success {
+        background-color: $green;
+    
+        .toast-close-button {
+            color: darken($green, 20%);
+        }
+    }    
+    .toast-warning {
+        background-color: $orange;
+    
+        .toast-close-button {
+            color: darken($orange, 20%);
+        }
+    }    
+    .toast-error {
+        background-color: $red;
+    
+        .toast-close-button {
+            color: darken($red, 25%);
+        }
+    }
+    .toast {
+        @extend .m-b-0;
+        a {
+            text-decoration: underline;
+    
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    
+        .toast-message {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    }
+}

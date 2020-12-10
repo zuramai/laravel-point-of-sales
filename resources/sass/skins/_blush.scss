@@ -1,0 +1,119 @@
+﻿.theme-blush{
+
+    ::selection{
+        color: $white; 
+        background: $blush;
+    }
+    .auth-main{
+        background: $blush;
+    }
+    .sidebar-nav .metismenu{
+        >li{
+            &.active>a,
+            a:hover{
+                background: $blush;
+                color: $white;
+            }
+            ul{
+                .active{
+                    a{
+                        color: $blush;
+                        
+                    }
+                }
+            }
+        }
+        
+        ul a:hover{
+            &::before{
+                background: $blush;
+            }
+        }
+        
+    }
+    .form-control{
+        &:focus {
+            color: $blush;
+        }
+    }
+    .fancy-checkbox{
+        input[type="checkbox"] {    
+            &:checked + span:before {
+                color: $blush;
+                border-color: $blush;
+            }
+        }
+    }
+    .chat-widget{
+        li {
+            &.right {
+                
+                .chat-info {
+                    background: $blush;
+                    color: $white;
+    
+                    &:before{
+                        border-left: 10px solid $blush;
+                    }
+                }
+            }
+        }
+    }
+    .wizard{
+        >.steps{
+            .current a{
+                background: $blush;
+            }
+            .done a{
+                background: $gray-500;
+            }
+        }        
+    }
+    .pagination{
+        >li{
+            >a{
+                color: $blush;
+                &:hover{
+                    background: $blush;
+                    border-color: $blush; 
+                    color: $white;
+                }
+            }
+            >span{
+                color: $blush;
+            }
+        }
+    }
+    .page-item.active .page-link{
+        background-color: $blush;
+        border-color: $blush;
+    }
+    .switch {
+        input:checked + .slider {
+            background-color: $blush;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px $blush;
+        }
+    }
+    .navbar-fixed-top #navbar-search .form-control{
+        &:focus,
+        &:active{
+            background: $white;
+            color: $blush;
+        }
+    }
+    .navbar-fixed-top{
+        border-color: $blush;
+    }
+    .sidebar_icon{
+        background: $blush;
+    }
+    #left-sidebar{
+        border-color:  $blush;
+    }
+    .navbar-nav .dropdown-menu li.header{
+        background: $blush;
+    }
+}

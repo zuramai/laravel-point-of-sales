@@ -1,0 +1,38 @@
+.news{
+    .card-title{
+        @extend .font-16;
+        a{
+            color: rgba($white, 0.6);
+            &:hover{
+                color: $info;
+            }
+        }
+    }
+    .card-columns{
+        column-count: 3;
+
+        .card{
+            @extend .m-b-20;
+        }
+        @include max-screen($break-medium){
+            column-count: 2;
+        }
+        @include max-screen($break-small - 1px){
+            column-count: 1;
+        }
+    }
+}
+.n_category{
+    .sub_n_category{
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        padding: 3px 10px;
+        @extend .font-12;
+        border-radius: $border-radius-small;
+        &.p_right{
+            left: auto;
+            right: 15px;
+        } 
+    }
+}

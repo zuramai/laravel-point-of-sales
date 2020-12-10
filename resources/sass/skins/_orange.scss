@@ -1,0 +1,119 @@
+﻿.theme-orange{
+
+    ::selection{
+        color: $white; 
+        background: $orange;
+    }
+    .auth-main{
+        background: $orange;
+    }
+    .sidebar-nav .metismenu{
+        >li{
+            &.active>a,
+            a:hover{
+                background: $orange;
+                color: $white;
+            }
+            ul{
+                .active{
+                    a{
+                        color: $orange;
+                        
+                    }
+                }
+            }
+        }
+        
+        ul a:hover{
+            &::before{
+                background: $orange;
+            }
+        }
+        
+    }
+    .form-control{
+        &:focus {
+            color: $orange;
+        }
+    }
+    .fancy-checkbox{
+        input[type="checkbox"] {    
+            &:checked + span:before {
+                color: $orange;
+                border-color: $orange;
+            }
+        }
+    }
+    .chat-widget{
+        li {
+            &.right {
+                
+                .chat-info {
+                    background: $orange;
+                    color: $white;
+    
+                    &:before{
+                        border-left: 10px solid $orange;
+                    }
+                }
+            }
+        }
+    }
+    .wizard{
+        >.steps{
+            .current a{
+                background: $orange;
+            }
+            .done a{
+                background: $gray-500;
+            }
+        }        
+    }
+    .pagination{
+        >li{
+            >a{
+                color: $orange;
+                &:hover{
+                    background: $orange;
+                    border-color: $orange; 
+                    color: $white;
+                }
+            }
+            >span{
+                color: $orange;
+            }
+        }
+    }
+    .page-item.active .page-link{
+        background-color: $orange;
+        border-color: $orange;
+    }
+    .switch {
+        input:checked + .slider {
+            background-color: $orange;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px $orange;
+        }
+    }
+    .navbar-fixed-top #navbar-search .form-control{
+        &:focus,
+        &:active{
+            background: $white;
+            color: $orange;
+        }
+    }
+    .navbar-fixed-top{
+        border-color: $orange;
+    }
+    .sidebar_icon{
+        background: $orange;
+    }
+    #left-sidebar{
+        border-color:  $orange;
+    }
+    .navbar-nav .dropdown-menu li.header{
+        background: $orange;
+    }
+}

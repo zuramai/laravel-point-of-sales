@@ -1,0 +1,101 @@
+/* Side Bar Menu */
+
+#left-sidebar {
+	@include transition(all .3s ease-in-out);
+	@extend .m-t-0;	
+    width: $sidebar-width;
+    background: $white;	
+    top: 60px;	
+	height: calc(100vh - 60px);
+	float: left;
+	position: fixed;
+	left: 0px;
+	z-index: 9; 
+	display: flex;	
+	
+	@include max-screen($break-large) {
+		width: 45px;
+	}
+
+	.sidebar-nav {
+		padding: 15px;
+		ul{
+			@extend .padding-0;
+			@extend .margin-0;
+			list-style: none;
+		}
+	}
+
+}
+.sidebar_icon{
+	width: 45px;
+	.nav-tabs{
+		border: 0;
+		.nav-item{
+			margin: 0;
+			.nav-link{
+                color: $white;
+				background: transparent;
+                border: 0;
+                border-radius: 0;
+				width: 45px;
+				line-height: 45px;
+				text-align: center;				
+                padding: 0;
+                
+				&.active,
+				&:hover,
+				&:focus{
+					background: rgba($white, 0.1);
+				}
+			}
+        }
+        li:last-child{
+            position: absolute;
+            bottom: 0;
+        }
+	}
+}
+
+.sidebar_list{
+	width: 100%;
+	@include max-screen($break-large) {
+		position: fixed;
+		left: 45px;
+		background: $white;
+		width: 250px;
+		display: none;
+	}
+	.tab-content{
+		margin: 0;		
+	}
+	&.dark_menu{
+		background: $dark;
+		color: $gray-400;
+
+		.metismenu{
+			a{
+				color: $gray-400;
+			}
+			li.header{
+				color: $gray-400;
+			}
+		}
+
+		.fancy-checkbox {
+		
+			input[type="checkbox"] {
+				
+				+ span {
+		
+					&:before {
+						border: 1px solid rgba($white, 0.3);
+					}
+				}
+			}
+		}
+		.progress {
+			background-color: rgba($white, 0.06);
+		}
+	}
+}

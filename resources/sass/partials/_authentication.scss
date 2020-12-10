@@ -1,0 +1,123 @@
+/* Authentication forms */
+
+
+.auth-main{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
+    height: 100vh;
+
+    .auth_div{
+        width: 100%;
+        z-index: 999;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: $white;
+
+        @include max-screen($break-small - 1px) {
+            width: 320px;
+        }
+        .card{        
+            overflow: hidden;
+            border: 0;
+            box-shadow: none;
+            margin: 0 auto;
+            width: 360px;
+        }
+    }
+
+    .auth_right{
+        width: 500px;
+        color: $white;
+    }
+
+    .auth_brand{
+        @extend .m-b-30;
+    }
+	.form-auth-small {
+		.btn{
+            @extend .m-t-20;
+		}
+
+		.element-left {
+			float: left;
+		}
+
+		.element-right {
+			float: right;
+		}
+
+		.bottom {
+            @extend .m-t-20;
+			@extend .align-center;
+		}
+    }    
+    .lead {
+        @extend .m-t-5;
+        @extend .m-b-0;
+        @extend .font-20;
+        color: $font-color;
+    }
+	.helper-text {
+        color: $color-muted;
+        @include display-block;
+	}
+	.btn-signin-social {
+        @include display-block;
+        @extend .m-b-5;
+        background-color: $white;
+        border-color: $gray-200;
+        font-weight: $font-weight-400;
+		padding: 10px 22px;
+		width: 100%;		
+
+		&:hover,
+		&:focus {
+			background-color: $gray-200;
+		}
+		i {
+            @extend .font-16;
+			margin: 5px;
+		}
+    }
+    .page-400,
+    .forgot-pass{
+        &::before{
+            z-index: 1;
+        }
+        .header,
+        .body{
+            z-index: 9;
+            position: relative;
+        }
+    }    
+    .page-400{
+        position: relative;        
+        &::before{
+            content: '404';
+            font-size: 100px;
+            top: 20px;
+            position: absolute;
+            left: 80px;
+            opacity: 0.07;
+        }
+    }
+    .forgot-pass{
+        position: relative;
+        &::before{
+            content: '\e08e';
+            font-family: 'Simple-Line-Icons';
+            font-size: 290px;
+            top: -80px;
+            position: absolute;
+            left: 38px;
+            opacity: 0.03;
+        }
+    }
+
+	@include max-screen($break-medium) {        
+        margin: 0 auto;
+	}
+}

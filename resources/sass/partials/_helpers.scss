@@ -1,0 +1,258 @@
+/* Helpers */
+
+.bg-info {
+    background: $info;
+    color: rgba($white,0.7);
+}
+.bg-red {
+    background: $red;
+    color: rgba($white,0.7);
+}
+.bg-purple {
+    background: $purple;
+    color: rgba($white,0.7);
+}
+.bg-orange {
+    background: $orange;
+    color: rgba($white,0.7);
+}
+.bg-green {
+    background: $green;
+    color: rgba($white,0.7);
+}
+.bg-blue {
+    background: $blue;
+    color: rgba($white,0.7);
+}
+.bg-blush {
+    background: $blush;
+    color: rgba($white,0.7);
+}
+.bg-pink {
+    background: $pink;
+    color: rgba($white,0.7);
+}
+.bg-indigo {
+    background: $indigo;
+    color: rgba($white,0.7);
+}
+.bg-azura {
+    background: $azura;
+    color: rgba($white,0.7);
+}
+.bg-white {
+    background: $white;
+    color: rgba($white,0.7);
+}
+.bg-dark {
+    background: $dark;
+    color: rgba($white,0.7);
+}
+.bg-cyan {
+    background: $cyan;
+    color: rgba($white,0.7);
+}
+
+
+.lbg-info {
+    background: rgba($info,0.2);
+    color: $info;
+}
+.lbg-red {
+    background: rgba($red,0.2);
+    color: $red;
+}
+.lbg-purple {
+    background: rgba($purple,0.2);
+    color: $purple;
+}
+.lbg-orange {
+    background: rgba($orange,0.2);
+    color: $orange;
+}
+.lbg-green {
+    background: rgba($green,0.2);
+    color: $green;
+}
+.lbg-blue {
+    background: rgba($blue,0.2);
+    color: $blue;
+}
+.lbg-blush {
+    background: rgba($blush,0.2);
+    color: $blush;
+}
+.lbg-pink {
+    background: rgba($pink,0.2);
+    color: $pink;
+}
+.lbg-indigo {
+    background: rgba($indigo,0.2);
+    color: $indigo;
+}
+.lbg-azura {
+    background: rgba($azura,0.2);
+    color: $azura;
+}
+.lbg-dark {
+    background: rgba($dark,0.2);
+    color: $dark;
+}
+.lbg-cyan {
+    background: rgba($cyan,0.2);
+    color: $cyan;
+}
+
+// text color 
+.text-info {
+    color: $info;
+}
+.text-red {
+    color: $red;
+}
+.text-purple {
+    color: $purple;
+}
+.text-orange {
+    color: $orange;
+}
+.text-green {
+    color: $green;
+}
+.text-blue {
+    color: $blue;
+}
+.text-blush {
+    color: $blush;
+}
+.text-pink {
+    color: $pink;
+}
+.text-indigo {
+    color: $indigo;
+}
+.text-azura {
+    color: $azura;
+}
+.text-white {
+    color: $white;
+}
+.text-dark {
+    color: $dark;
+}
+
+//Margin
+@for $i from -25 through 25 {
+    .m-l-#{$i * 5} {
+        margin-left: #{$i * 5}px;
+    }
+
+    .m-t-#{$i * 5} {
+        margin-top: #{$i * 5}px;
+    }
+
+    .m-r-#{$i * 5} {
+        margin-right: #{$i * 5}px;
+    }
+
+    .m-b-#{$i * 5} {
+        margin-bottom: #{$i * 5}px;
+    }
+}
+.margin-0 {
+    margin: 0 !important;
+}
+@for $i from 0 through 25 {
+    .p-l-#{$i * 5} {
+        padding-left: #{$i * 5}px;
+    }
+
+    .p-t-#{$i * 5} {
+        padding-top: #{$i * 5}px;
+    }
+
+    .p-r-#{$i * 5} {
+        padding-right: #{$i * 5}px;
+    }
+
+    .p-b-#{$i * 5} {
+        padding-bottom: #{$i * 5}px;
+    }
+}
+.padding-0 {
+    padding: 0 !important;
+}
+@for $i from 5 through 49 {
+    .font-#{$i + 1} {
+        font-size: #{$i + 1}px;
+    }
+}
+
+.align-left {
+    text-align: left;
+}
+.align-center {
+    text-align: center;
+}
+.align-right {
+    text-align: right;
+}
+.align-justify {
+    text-align: justify;
+}
+
+.border-right,
+.border-top,
+.border-left,
+.border-bottom{
+    border-color: $border-color !important;
+}
+.w30{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.w35{
+    width: 35px;
+    height: 35px;
+}
+.w40{
+    width: 40px;
+}
+.w60{
+    width: 60px;
+}
+.w80{
+    width: 80px;
+}
+.w100{
+    width: 100px;
+}
+.title_font{
+    font-family: "Saira",sans-serif;
+}
+
+.inlineblock {display: inline-block;}
+.displayblock {display: block;}
+.displaynone {display: none; }
+.overflowhidden{overflow: hidden;}
+.z-index{ z-index: 9999;}
+hr{ border-top: 1px solid rgba($dark,0.1)}
+
+.p-10{padding: 10px !important;}
+.p-15{padding: 15px !important;}
+.p-20{
+    padding: 20px !important;
+}
+.p-25 {
+    padding: 25px !important;
+}
+.font300{
+    font-weight: $font-weight-300;
+}
+.font600{
+    font-weight: $font-weight-600;
+}
+.font700{
+    font-weight: $font-weight-700;
+}

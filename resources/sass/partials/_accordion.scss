@@ -1,0 +1,95 @@
+.accordion{
+    > div{
+        @extend .m-b-5;
+        background: $body-color;
+        border-radius: $border-radius-small;
+    }
+	.card-header{
+        @extend .padding-0;
+        
+        .btn{
+            @extend .font-15;
+            @extend .align-left;
+            color: $gray-800;
+            padding: 10px 20px;
+            width: 100%;
+            @include max-screen($break-small - 1px) {
+                white-space: normal;
+            }
+
+            &:hover,
+            &:focus{
+                box-shadow: none;
+                text-decoration: none;
+            }         
+        }
+    }
+
+    &.custom{
+        .card-header{
+            background: transparent;
+            border-color: $gray-200;
+
+            .btn{
+                color: $gray-700;
+
+                &:hover,
+                &:focus{
+                    text-decoration: none;                    
+                }
+            }
+        }
+        .card-body{
+            font-size: 15px;
+            line-height: 28px;
+            color: $gray-600;
+        }
+    }
+}
+
+.accordion2 {
+    @extend .margin-0;
+    @extend .padding-0;
+	list-style: none;
+    border-top: 1px solid $border-color;;
+    
+    .accordion-item {
+        border-bottom: 1px solid $border-color;
+        padding: 0 10px;        
+    }
+
+    /* Thumb */
+    .accordion-thumb {
+        @extend .margin-0;
+        @extend .font-16;
+        font-weight: $font-weight-400;        
+        padding: .8rem 0;
+        cursor: pointer;        
+        
+        // Chevron
+        &::before {
+            @include transition(all .3s ease-in-out);
+            @include inline-block;            
+            content: "\f138";
+            font-family: 'FontAwesome';            
+        }
+
+        span{
+            @extend .m-l-10;
+        }
+    }
+
+    /* Panel */
+    .accordion-panel {
+        @extend .margin-0;
+        @extend .p-b-10;
+        display: none;
+    }
+
+    /* Active */
+    .accordion-item.is-active {
+        .accordion-thumb::before {
+            content: "\f13a";            
+        }
+    }
+}

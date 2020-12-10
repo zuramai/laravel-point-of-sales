@@ -1,0 +1,54 @@
+.pricing {
+	
+	color: $gray-600;	    
+    @extend .p-l-0;
+    @extend .m-b-0;
+    @extend .align-center;
+
+    &:hover{
+        .plan-img{
+            img{
+                background: $azura;
+            }
+        }
+    }
+    
+    li{
+        list-style: none;
+        padding: 8px;
+    }
+    .plan-img{
+        img{
+            @include transition(all .4s ease-in-out);
+            background: rgba($white, 0.03);
+            max-width: 180px;
+        }
+    }
+    .price{
+        @extend .m-t-20;
+        @extend .m-b-30;
+    }
+    .plan-btn{
+        @extend .m-t-30;
+    }
+
+    h3 {
+        @extend .m-b-0;
+        @extend .font-35;
+
+        span{
+            vertical-align: top;
+            @extend .font-15;
+        }
+        small{
+            @extend .font-12;
+        }
+    }
+
+    &.active{
+        
+        h3{
+            color: $azura;
+        }
+    }
+}

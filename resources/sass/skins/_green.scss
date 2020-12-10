@@ -1,0 +1,119 @@
+﻿.theme-green{
+
+    ::selection{
+        color: $white; 
+        background: $green;
+    }
+    .auth-main{
+        background: $green;
+    }
+    .sidebar-nav .metismenu{
+        >li{
+            &.active>a,
+            a:hover{
+                background: $green;
+                color: $white;
+            }
+            ul{
+                .active{
+                    a{
+                        color: $green;
+                        
+                    }
+                }
+            }
+        }
+        
+        ul a:hover{
+            &::before{
+                background: $green;
+            }
+        }
+        
+    }
+    .form-control{
+        &:focus {
+            color: $green;
+        }
+    }
+    .fancy-checkbox{
+        input[type="checkbox"] {    
+            &:checked + span:before {
+                color: $green;
+                border-color: $green;
+            }
+        }
+    }
+    .chat-widget{
+        li {
+            &.right {
+                
+                .chat-info {
+                    background: $green;
+                    color: $white;
+    
+                    &:before{
+                        border-left: 10px solid $green;
+                    }
+                }
+            }
+        }
+    }
+    .wizard{
+        >.steps{
+            .current a{
+                background: $green;
+            }
+            .done a{
+                background: $gray-500;
+            }
+        }        
+    }
+    .pagination{
+        >li{
+            >a{
+                color: $green;
+                &:hover{
+                    background: $green;
+                    border-color: $green; 
+                    color: $white;
+                }
+            }
+            >span{
+                color: $green;
+            }
+        }
+    }
+    .page-item.active .page-link{
+        background-color: $green;
+        border-color: $green;
+    }
+    .switch {
+        input:checked + .slider {
+            background-color: $green;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px $green;
+        }
+    }
+    .navbar-fixed-top #navbar-search .form-control{
+        &:focus,
+        &:active{
+            background: $white;
+            color: $green;
+        }
+    }
+    .navbar-fixed-top{
+        border-color: $green;
+    }
+    .sidebar_icon{
+        background: $green;
+    }
+    #left-sidebar{
+        border-color:  $green;
+    }
+    .navbar-nav .dropdown-menu li.header{
+        background: $green;
+    }
+}

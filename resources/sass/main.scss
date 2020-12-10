@@ -1,0 +1,58 @@
+// import google fonts
+@import 'font/fonts';
+@import 'font/simple-line-icons';
+@import 'font/weather-icons';
+
+@import "mixins/responsive";
+@import "mixins/clearfix";
+@import "mixins/css3";
+@import "mixins/elements-color-custom";
+
+@import "base/variables";
+@import "base/general";
+@import "metisMenu/metisMenu";
+
+@import "partials/tabs";
+@import "partials/badges";
+@import "partials/layout";
+@import "partials/card";
+@import "partials/navigation";
+@import "partials/leftbar";
+@import "partials/rightbar";
+@import "partials/megamenu";
+@import "partials/forms";
+@import "partials/authentication";
+@import "partials/buttons";
+@import "partials/elements";
+@import "partials/accordion";
+@import "partials/elements-bootstrap";
+@import "partials/charts";
+@import "partials/social-brands";
+@import "partials/typography";
+@import "partials/helpers";
+@import "partials/mediaobject";
+@import "partials/formwizard";
+@import "partials/tables";
+@import "partials/flipcards";
+
+@import "partials/summernote";
+@import "partials/ekeditor";
+
+@import "pages/widgets";
+@import "pages/chatapp";
+@import "pages/inbox";
+@import "pages/page-profile";
+@import "pages/timeline";
+@import "pages/calendar";
+@import "pages/pricing";
+@import "pages/invoice";
+
+@import "pages/news";
+@import "pages/social";
+
+// Color skins scss
+@import 'skins/blue.scss';
+@import 'skins/cyan.scss';
+@import 'skins/green.scss';
+@import 'skins/orange.scss';
+@import 'skins/blush.scss';

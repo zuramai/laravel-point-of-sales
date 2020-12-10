@@ -1,0 +1,169 @@
+
+// Fonts
+$font-family: 			'Raleway', sans-serif;
+$font-title: 			'Saira', sans-serif;
+$font-size: 			15px;
+
+$body-color: 			#ebeeef;
+$font-color: 			#494b52;
+$link-color: 			#6290d0;
+$border-color: 			#ced4da;
+$line-color: 			#e8e8e8;
+$card-color: 			#FFFFFF;
+$dark-line-color: 		#1f2125;
+$card-border:			#f3f4f6;
+$link-color-hover: darken($link-color, 8%);
+
+$red: 					#E15858 !default;
+$purple: 				#AA55AA !default;
+$orange: 				#FFA117 !default;
+$green: 				#5CB65F !default;
+$blue: 					#395bb6 !default;
+$blush: 				#e25985 !default;
+$pink: 					#f66d9b !default;
+$indigo:				#ab8ce4 !default;
+$azura:					#007FFF !default;
+$cyan: 					#36c2cf !default;
+$info: 					#3C89DA !default;
+$white:					#FFFFFF !default;
+$dark:			 		#2D3541 !default;
+
+$gray-50: 				#f4f7f6 !default;
+$gray-100: 				#f7f7f7 !default;
+$gray-200: 				#e2e4e7 !default;
+$gray-300: 				#bbbec2 !default;
+$gray-400: 				#96989c !default;
+$gray-500: 				#77797c !default;
+$gray-600: 				#57595d !default;
+$gray-700: 				#393d42 !default;
+$gray-800: 				#212834 !default;
+$gray-900: 				#191f28 !default;
+
+// Bootstrap colors
+$color-primary: 		#00bcd2;
+$color-accent: 			#5c8ed4;
+$color-info: 			#3C89DA;
+$color-success: 		#22af46;
+$color-warning: 		#f3ad06;
+$color-danger: 			#de4848;
+$color-muted: 			#9A9A9A;
+$color-default-dark: 	#acb5c1;
+
+$sidebar-width: 		290px;
+$sidebar-color: 		#f8f8f8;
+
+$font-weight-300: 300   !default;
+$font-weight-400: 400   !default;
+$font-weight-500: 500   !default;
+$font-weight-600: 600   !default;
+$font-weight-700: 700   !default;
+
+$border-radius-extra-small:     0.125rem    !default;
+$border-radius-small:           0.1875rem   !default;
+$border-radius-large:           0.550rem     !default;
+$border-radius-extreme:         0.875rem    !default;
+
+// Breakpoints
+$break-xsmall: 			640px;
+$break-small: 			768px;
+$break-medium: 			992px;
+$break-1024: 			1024px;
+$break-large: 			1200px;
+$break-1280: 			1280px;
+$break-xlarge: 			1440px;
+$break-xxlarge: 		1600px;
+
+// custom colors
+$custom-colors: (
+	"blue": 			#568AD3,
+	"green": 			#5CB65F,
+	"orange": 			#FFA117,
+	"purple": 			#AB7DF6,
+	"yellow": 			#F3BB23,
+	"lightseagreen": 	#20B2AA
+);
+
+// Social media brand colors
+$social-colors : (
+	z500px: #0099e5,
+	about-me: #00405d,
+	airbnb: #fd5c63,
+	alphabet: #ed1c24,
+	amazon: #ff9900,
+	american-express: #002663,
+	aol: #ff0b00,
+	behance: #1769ff,
+	bing: #ffb900,
+	bitbucket: #205081,
+	bitly: #ee6123,
+	blogger: #f57d00,
+	booking-com: #003580,
+	buffer: #168eea,
+	code-school: #616f67,
+	codecademy: #f65a5b,
+	creative-market: #8ba753,
+	delicious: #3399ff,
+	deviantart: #05cc47,
+	digg: #005be2,
+	disqus: #2e9fff,
+	django: #092e20,
+	dribbble: #ea4c89,
+	dropbox: #007ee5,
+	drupal: #0077c0,
+	elance: #0d69af,
+	etsy: #d5641c,
+	facebook: #3b5998,
+	feedly: #2bb24c,
+	flattr: #f67c1a,
+	flickr: #0063dc,
+	flipboard: #e12828,
+	flixster: #2971b2,
+	foursquare: #0732a2,
+	github: #333333,
+	google: #4285f4,
+	google-plus: #dc4e41,
+	instagram: #3f729b,
+	kickstarter: #2bde73,
+	kik: #82bc23,
+	lastfm: #d51007,
+	line: #00c300,
+	linkedin: #0077b5,
+	mail-ru: #168de2,
+	mailchimp: #2c9ab7,
+	myspace: #000000,
+	netflix: #e50914,
+	ning: #75af42,
+	path: #ee3423,
+	patreon: #e6461a,
+	paypal: #003087,
+	photobucket: #0ea0db,
+	pinterest: #bd081c,
+	product-hunt: #da552f,
+	quora: #a82400,
+	rdio: #007dc3,
+	reddit: #ff4500,
+	rss: #f26522,
+	salesforce: #1798c1,
+	scribd: #1a7bba,
+	shopify: #96bf48,
+	skype: #00aff0,
+	slack: #6ecadc,
+	slideshare: #0077b5,
+	soundcloud: #ff8800,
+	spotify: #2ebd59,
+	squarespace: #222222,
+	stackoverflow: #fe7a15,
+	stripe: #00afe1,
+	stumbleupon: #eb4924,
+	telegram: #0088cc,
+	tumblr: #35465c,
+	twitch-tv: #6441a5,
+	twitter: #55acee,
+	vimeo: #162221,
+	vine: #00b488,
+	wechat: #7bb32e,
+	whatsapp: #43d854,
+	wordpress: #21759b,
+	yahoo: #410093,
+	youtube: #cd201f
+);

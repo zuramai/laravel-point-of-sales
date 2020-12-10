@@ -1,0 +1,64 @@
+/* Typography */
+h6{
+    font-weight: $font-weight-600;
+}
+h3{
+    font-weight: $font-weight-700;
+}
+
+ul.list-justify {
+	> li {
+		margin-bottom: 5px;
+
+		span,
+		strong {
+			float: right;
+		}
+	}
+
+	&.large-number {
+		> li {
+			margin-bottom: 15px;
+		}
+
+		span {
+			font-size: 32px;
+			line-height: 1;
+		}
+	}
+}
+
+.text-primary {
+	color: $color-accent;
+}
+
+.text-info {
+	color: $info;
+}
+
+.text-success {
+	color: $green;
+}
+
+.text-warning {
+	color: $orange;
+}
+
+.text-danger {
+	color: $red;
+}
+
+.text-muted {
+	color: $color-muted;
+}
+
+.text-larger {
+	font-size: 1.2em;
+}
+
+.text-large {
+	font-size: 1.53em;
+}
+small{
+	font-size: 90%;
+}

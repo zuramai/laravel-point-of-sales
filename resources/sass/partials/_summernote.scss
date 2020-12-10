@@ -1,0 +1,14 @@
+﻿.note-editor.note-frame{
+    border-color: $border-color;
+    background: $card-color;
+
+    .note-editing-area{
+        .note-editable{
+            background: $card-color;
+            color: $font-color;
+        }
+    }
+    .note-statusbar{
+        background-color: $border-color;
+    }
+}

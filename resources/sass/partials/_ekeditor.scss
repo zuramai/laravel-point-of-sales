@@ -1,0 +1,48 @@
+﻿.cke_chrome{
+    .cke_top{
+        background: $gray-100;
+    }
+    .cke_toolgroup,
+    a.cke_combo_button{
+        background-color: $white;
+        box-shadow: none;
+        background-image: none;
+        border-color: $gray-200;
+    }    
+}
+
+.md-editor{
+    border-color: $border-color;
+    &.active{
+        border-color: $link-color;
+    }
+    > textarea{
+        background: $card-color;
+        border-color: $border-color;
+        color: $font-color;
+        &:focus{
+            background: transparent;
+        }
+    }
+    .md-footer,
+    > .md-header{
+        background: $border-color;
+    }
+    >.md-preview{
+        background: $card-color;
+        padding: 10px;
+        border-color: $border-color;
+    }
+    .md-controls{
+        padding: 0;
+        position: relative;
+        top: 8px;
+        right: 5px;
+        .md-control{
+            padding: 0;
+            &:hover{
+                color: $gray-200;
+            }
+        }
+    }
+}

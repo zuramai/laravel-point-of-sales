@@ -1,0 +1,245 @@
+.fc {
+    .fc-toolbar {
+        @include border-radius(0);
+        @extend .p-b-10;
+        @extend .margin-0;
+        color: $gray-800;
+        background: transparent; 
+
+        h2 {
+            @extend .font-16;
+            @extend .p-t-5;
+            @extend .margin-0;
+            color: $gray-400;
+            text-transform: uppercase;
+        }
+        .fc-today-button, .fc-state-default{
+            @include border-radius(0);
+            background: transparent;            
+            color: $gray-400;
+            font-size: $font-size;
+            padding: 5px 18px;
+            height: auto;                
+            border: none;
+            box-shadow: none;
+            text-shadow: none;
+        }        
+    }
+    .fc-view-container {
+        .fc-event {
+            color: $gray-100;            
+            @extend .font-12;
+            border-radius: $border-radius-small;            
+            border: 0;
+            padding: 3px 5px;
+
+            &.fc-event-end:not(.fc-event-start) {
+                border: 0!important;
+            }
+
+            &:focus,
+            &:hover,
+            &:active {
+                z-index: 1000;
+                color: $white;
+
+                .fc-overlay {
+                    @include display-block;
+                }
+            }
+        }
+        .fc-view {
+            &.fc-basic-view,
+            &.fc-agenda {
+                >table {
+                    >thead {
+                        tr {
+                            th,
+                            td {
+                                &.fc-widget-header {
+                                    border: 1px solid $border-color;
+                                    padding: 10px;
+                                    color: $gray-700;                      
+                                }
+                                &.fc-agenda-gutter {
+                                    @extend .padding-0;
+                                }
+                            }
+                            td {
+                                &.fc-widget-header {
+                                    @extend .padding-0;
+                                }
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                &.fc-widget-content {
+                                    border: 0;
+                                    border-bottom: 1px solid $border-color;
+                                    border-right: 1px solid $border-color;
+
+                                    &.fc-state-highlight {
+                                        background: $white;
+                                    }
+                                }
+                                &.fc-day-number {
+                                    padding: 5px 10px;
+                                    margin: 5px;
+                                    color: $gray-800;
+                                    @extend .font-15;
+
+                                    &.fc-state-highlight {
+                                        background-color: $red;
+                                        color: $white;
+                                        @include border-radius(50%);
+                                        padding: 4px 6px;
+                                        float: right;
+                                    }
+                                }
+                                &:first-child {
+                                    &.fc-widget-content {
+                                        border-left: 1px solid $border-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .fc-body {
+                    .fc-row .fc-bg {
+                        border-bottom: 1px solid $border-color;
+                    }
+                    .fc-row:last-of-type .fc-bg {                        
+                        border-bottom: 0;
+                    }
+                }
+                .fc-agenda-allday {
+                    .fc-agenda-axis,
+                    .fc-agenda-gutter {
+                        border-left: 1px solid $border-color;
+                        border-right: 1px solid $border-color;
+                        background-color: $gray-200;
+                        color: $gray-800;
+                        @extend .font-12;
+                        font-weight: $font-weight-300;
+                        padding: 10px 5px;
+                    }
+                }
+                >table {
+                    >tbody {
+                        >tr {
+                            >td {
+                                &.fc-state-highlight {
+                                    background: $gray-200;
+                                }
+                                &.fc-sat {
+                                    border-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .fc-agenda-slots {
+                    tr {
+                        line-height: 35px;
+                        th {
+                            border: 0;
+                            border-left: 1px solid $border-color;
+                            border-right: 1px solid $border-color;
+                            background-color: $gray-200;
+                            color: $gray-800;
+                            font-size: 12px;
+                            font-weight: 100;
+                            padding-top: 10px;
+                        }
+                        td.fc-widget-content {
+                            border-bottom: 1px solid $border-color;
+                            line-height: 50px;
+                            &:last-child {
+                                border-right: 0;
+                            }
+                        }
+                        &.fc-minor {
+                            td.fc-widget-content {
+                                border-bottom: 1px solid $border-color;
+                            }
+                        }
+                    }
+                }
+                .fc-agenda-divider {
+                    border: 1px solid $border-color;
+                    .fc-agenda-divider-inner {
+                        background-color: $gray-200;
+                        height: 3px;
+                    }
+                }
+            }
+        }
+        .fc-list-view{
+            .fc-list-item{
+                color: $gray-200;
+            }
+        }
+        .fc-other-month{
+            background: $body-color;
+        }
+
+        .fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number{
+            float: left;
+            padding: 10px 0 5px 10px;
+        }
+    }
+    .fc-popover{
+        box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.2);
+        border: none;
+        padding: 10px;
+        border-radius: $border-radius-large;
+        .fc-event-container{
+            padding: 0;
+        }
+        .fc-event{
+            padding: 4px 8px;
+            margin: 2px 0px;
+        }
+    
+    }
+    .fc-agendaWeek-view,
+    .fc-agendaDay-view,
+    .fc-listWeek-view{
+        .fc-head{
+            .fc-widget-header{
+                span{
+                    padding: 10px;
+                    display: inline-block;
+                }
+            }
+        }
+    }  
+    .fc-divider{
+       display: none;
+    }
+    .fc-scroller{
+        height: auto !important;
+        overflow: unset !important;
+    }
+    
+}
+
+.fc-unthemed{
+    th{
+        background: $border-color; 
+    }
+    td, th{
+        border-color: $border-color; 
+    }
+    .fc-divider{
+        background: $border-color;
+    }
+}
+@include max-screen($break-small - 1px){
+    .fc-toolbar .fc-right{ display: none;}
+    .fc-toolbar .fc-left{ width: 100%; margin-bottom: 15px;}
+    .fc .fc-toolbar .fc-today-button{ float: right;}
+}

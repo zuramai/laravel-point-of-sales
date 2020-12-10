@@ -1,0 +1,11 @@
+.btn{
+    font-size: $font-size;
+    font-weight: $font-weight-300;
+
+	&.btn-round{
+
+        border-radius: 50px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+	}
+}

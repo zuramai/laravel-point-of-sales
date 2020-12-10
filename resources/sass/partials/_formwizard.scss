@@ -1,0 +1,229 @@
+﻿.wizard {
+
+    .content {
+        @extend .margin-0;
+        min-height: 245px;        
+        overflow-y: auto;        
+        border-radius: 0;
+        background-color: transparent;
+	    border: 1px solid $border-color;
+
+        .body {
+            padding: 15px;
+
+            label.error{
+                @extend .margin-0;
+                @extend .font-12;
+                color: $red;
+            }
+
+            input[type="checkbox"]{
+                display: none;
+            }
+            input{
+                border-color: $border-color;
+            }
+            p{
+                @extend .font-15;
+            }
+        }
+    }
+
+    .actions {
+        position: relative;
+        @include display-block;
+        @extend .align-right;
+        width: 100%;            
+        margin-top: 10px !important;      
+
+        ul{
+            @include inline-block;
+            > li{
+                float: left;
+                margin: 0 !important;
+            }
+        }
+
+        a {
+            @include transition(all .5s ease-out);
+            @include display-block;
+            @include border-radius(35px);
+            @extend .m-l-5;
+            padding: 0.5em 2em;
+            color: $white;            
+            text-decoration: none;            
+
+            &:hover, &:active {
+                @include display-block;
+                padding: 0.5em 2em;
+                color: $white;                
+                text-decoration: none;                    
+            }
+        }
+
+        .disabled a {
+            background: $gray-200;
+            color: $gray-300;
+
+            &:hover, &:active {
+                background: $gray-200;
+                color: $gray-300;
+            }
+        }
+    }
+
+    .steps {
+
+        position: relative;
+        @include display-block;
+        width: 100%;
+        margin-bottom: 2px;
+
+        a {
+            @include display-block;
+            width: auto;
+            margin: 0 2px 0 0;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 0;
+
+            &:hover, &:active {
+                @include display-block;                
+                width: auto;
+                margin: 0 2px 0 0;
+                padding: 10px;
+                text-decoration: none;
+                border-radius: 0;
+            }
+        }
+
+        .number{
+            font-size: 15px;
+        }
+
+        .disabled a {
+            background: $border-color;
+            color: $gray-400;
+            cursor: default;
+
+            &:hover, &:active {
+                background: $border-color;
+                color: $gray-400;
+                cursor: default;
+            }
+        }
+
+        .current a {
+            color: $white;
+            cursor: default;
+
+            &:hover, &:active {
+                color: $white;
+                cursor: default;
+            }
+        }
+
+        .done a {
+            color: $white;
+            opacity: 0.7;
+
+            &:hover, &:active {
+                color: $white;
+                opacity: 0.7;
+            }
+        }
+
+        > ul > li {
+            width: 25%;
+            float: left;
+            &:last-child{
+                a{
+                    margin: 0;
+                }
+            }
+        }
+        
+    }
+
+    &.vertical {
+        > .steps {
+            float: left;
+            width: 30%;
+            @extend .p-r-5;
+
+            > ul > li {
+                float: none;
+                width: 100%;
+
+                a{
+                    margin: 0 0 2px 0;
+                }
+            }
+        }
+
+        > .content {
+            float: left;            
+            width: 70%;
+            margin: 0;
+        }
+
+        > .actions {
+            float: right;
+            width: 100%;
+            margin: 0;
+        }        
+    }
+
+    &.step_icon{
+        .content {
+            min-height: 200px;
+            background-color: $border-color;
+            border: 1px solid $border-color;
+        }
+        .steps {
+            @extend .m-b-10;
+            > ul > li {
+                width: auto;
+                text-align: center;
+                a{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: $border-radius-small;
+                } 
+            }
+            .number{
+                display: none;
+            }
+        }
+    }
+}
+
+.wizard_validation{
+    .wizard .steps>ul>li{
+        width: auto !important;
+    }
+}
+
+@include max-screen($break-small - 1px){
+    .wizard {
+        > .steps{
+            > ul > li{
+                width: 100%;
+                margin-bottom: 2px;
+            }
+            a{
+                margin: 0;
+            }
+        }
+        &.wizard.vertical{
+            >.content, >.steps{
+                width: 100%;
+                padding: 0;
+                
+            }
+        }
+    } 
+    .wizard_validation .wizard .steps>ul>li{
+        width: 100% !important;
+    }  
+}

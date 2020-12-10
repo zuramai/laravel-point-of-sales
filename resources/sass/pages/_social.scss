@@ -1,0 +1,110 @@
+.social{
+    .profile-header{
+        border-radius: $border-radius-small;
+        background: $dark;
+        color: $white;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;        
+
+        @include max-screen($break-small - 1px){
+            display: block !important;
+            .d-flex{
+                margin-bottom: 20px;
+            }
+        }
+        img{
+            width: 70px;            
+        }
+    }
+}
+.w_social3 {
+    .card{
+        @include border-radius(3px);
+        @extend .align-center;
+        font-weight: $font-weight-400;        
+        color: $font-color;
+        background: $card-color;
+        padding: 22px;        
+        border-top: 1px solid rgba($white, 0.09);
+
+        .fa{
+            @extend .m-b-15;
+            font-size: 30px;            
+        }
+    }
+    .text {
+        margin-top: 0 !important;
+    }
+    .facebook-widget {
+        .icon {
+            i {
+                color: #3b5998;
+            }
+        }
+        &:hover{
+            background: #3b5998;
+            .icon {
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .google-widget {
+        .icon {
+            i {
+                color: #d34836;
+            }
+        }
+        &:hover{
+            background: #d34836;
+            .icon {
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .twitter-widget {
+        .icon {
+            i {
+                color: #0084b4;
+            }
+        }
+        &:hover{
+            background: #0084b4;
+            .icon {
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .instagram-widget {
+        .icon {
+            i {
+                color: #fb3958;
+            }
+        }
+        &:hover{
+            background: #fb3958;
+            .icon {
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+.member-card {
+    @extend .align-center;
+    @extend .overflowhidden;
+    img{
+        width: 80px;
+        box-shadow: 0px 10px 25px 0px rgba($dark, 0.3);
+    }
+    .text-pink {
+        @include display-block;
+    }
+}

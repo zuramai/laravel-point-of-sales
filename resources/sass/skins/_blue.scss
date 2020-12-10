@@ -1,0 +1,119 @@
+﻿.theme-blue{
+
+    ::selection{
+        color: $white; 
+        background: $blue;
+    }
+    .auth-main{
+        background: $blue;
+    }
+    .sidebar-nav .metismenu{
+        >li{
+            &.active>a,
+            a:hover{
+                background: $blue;
+                color: $white;
+            }
+            ul{
+                .active{
+                    a{
+                        color: $blue;
+                        
+                    }
+                }
+            }
+        }
+        
+        ul a:hover{
+            &::before{
+                background: $blue;
+            }
+        }
+        
+    }
+    .form-control{
+        &:focus {
+            color: $blue;
+        }
+    }
+    .fancy-checkbox{
+        input[type="checkbox"] {    
+            &:checked + span:before {
+                color: $blue;
+                border-color: $blue;
+            }
+        }
+    }
+    .chat-widget{
+        li {
+            &.right {
+                
+                .chat-info {
+                    background: $blue;
+                    color: $white;
+    
+                    &:before{
+                        border-left: 10px solid $blue;
+                    }
+                }
+            }
+        }
+    }
+    .wizard{
+        >.steps{
+            .current a{
+                background: $blue;
+            }
+            .done a{
+                background: $gray-500;
+            }
+        }        
+    }
+    .pagination{
+        >li{
+            >a{
+                color: $blue;
+                &:hover{
+                    background: $blue;
+                    border-color: $blue; 
+                    color: $white;
+                }
+            }
+            >span{
+                color: $blue;
+            }
+        }
+    }
+    .page-item.active .page-link{
+        background-color: $blue;
+        border-color: $blue;
+    }
+    .switch {
+        input:checked + .slider {
+            background-color: $blue;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px $blue;
+        }
+    }
+    .navbar-fixed-top #navbar-search .form-control{
+        &:focus,
+        &:active{
+            background: $white;
+            color: $blue;
+        }
+    }
+    .navbar-fixed-top{
+        border-color: $blue;
+    }
+    .sidebar_icon{
+        background: $blue;
+    }
+    #left-sidebar{
+        border-color:  $blue;
+    }
+    .navbar-nav .dropdown-menu li.header{
+        background: $blue;
+    }
+}

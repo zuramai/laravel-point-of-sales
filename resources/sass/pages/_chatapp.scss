@@ -1,0 +1,204 @@
+
+.chatapp_list {
+    @include transition(all .3s ease-in-out);
+    width: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    z-index: 7;
+}
+
+.chatapp_body {
+    margin-left: 250px;
+    border-left: 1px solid $border-color;
+
+    @include max-screen($break-medium){
+        margin-right: 0;
+    }
+    @include max-screen($break-small){
+        border: 0;
+    }
+
+    .chat-header {
+        padding: 15px 20px;
+        @include max-screen($break-small){
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        img {
+            float: left;
+            @include border-radius(4px);
+            width: 40px;
+        }
+        .chat-about {
+            float: left;
+        }        
+    }
+    .chat-history {
+        padding: 20px;
+        border-top: 1px solid $border-color;
+
+        @include max-screen($break-1024){
+            height: 450px;
+            overflow-y: auto;
+        }
+        @include max-screen($break-medium){
+            height: 630px;
+            overflow-y: auto;
+        }
+        @include max-screen($break-small){
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .message_data {
+            @extend .padding-0;
+            @extend .margin-0;
+
+            li {
+                @extend .m-b-40;
+                @extend .m-t-10;
+                list-style: none;
+                position: relative;
+
+                .data_time {
+                    @extend .font-12;
+                    color: $gray-500;                    
+                    position: absolute;
+                    bottom: -25px;
+                }
+                .message {
+                    @include inline-block;
+                    @extend .font-15;                    
+                    padding: 18px 20px;
+                    line-height: 26px;            
+                    position: relative;
+                    
+                    &:after {
+                        border: solid transparent;
+                        content: " ";
+                        height: 0;
+                        width: 0;
+                        position: absolute;
+                        pointer-events: none;
+                        border-width: 5px;
+                    }
+                }
+
+                .user_pix{
+                    @include transition(all .3s ease-in-out);
+                    @include border-radius(4px);
+                    position: absolute;
+                    bottom: 0;
+                    width: 35px;
+                    height: 35px;
+                    opacity: 0.6;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+
+                &.left{
+                    .user_pix{
+                        left: 0;
+                    }
+                    .data_time {
+                        left: 50px;
+                    }
+                    .message{
+                        @extend .align-left;
+                        @extend .m-l-50;
+                        background: $info;
+                        color: $gray-100;
+                        float: left;
+                        border-radius: 10px 10px 10px 0;
+
+                        &:after {
+                            @extend .m-r-0;
+                            bottom: 0;
+                            left: -10px;
+                            border-right-color: $info;
+                            border-bottom-color: $info;
+                        }
+                    }
+
+                }
+                &.right{
+                    .user_pix{
+                        right: 0;
+                    }
+                    .data_time {
+                        right: 50px;
+                    }
+                    .message{
+                        @extend .align-right;
+                        @extend .m-r-50;
+                        background: $gray-100; 
+                        color: $gray-600;                       
+                        float: right;
+                        border-radius: 10px 10px 0 10px;
+
+                        &:after {
+                            bottom: 0;
+                            right: -10px;
+                            border-left-color: $gray-100;
+                            border-bottom-color: $gray-100;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .chat-message {
+      padding: 20px;
+        @include max-screen($break-small){
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.chatapp_detail{
+    @include transition(all .3s ease-in-out);
+    width: 250px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    z-index: 7;
+    
+    @include max-screen($break-medium){
+        display: none;
+    }
+}
+
+@include max-screen($break-small - 1px){
+        
+    .chatapp_list{
+        height: 465px;
+        width: 100%;
+        overflow-x: auto;
+        background: $white;
+        left: -400px;
+        display: none;
+        
+        &.open{
+            left: 0;
+        }
+    }
+    .chatapp_body{
+        margin: 0;
+
+        .chat-header{
+            border-radius:0.55rem 0.55rem 0 0;
+        }
+        .chat-history{
+            height: 300px;
+            overflow-x: auto;
+        }
+    }    
+}

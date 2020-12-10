@@ -1,0 +1,54 @@
+ul.choose-skin{
+    @extend .m-b-0;
+    display: flex;
+    justify-content: space-between;
+
+	li{
+        @extend .m-b-5;
+
+        &:last-child{
+            @extend .m-b-0;
+        }
+		
+		div{
+            @include transition(all .3s ease-in-out);
+            @include border-radius(3px);
+            @include inline-block;
+            height: 35px;
+            width: 35px;
+            overflow: hidden;
+            position: relative;
+
+            &.blue{
+                background: $blue;
+			}
+            &.green{
+                background: $green;
+			}
+            &.orange{
+                background: $orange;
+            }
+			&.cyan{
+                background: $cyan;
+			}			
+			&.blush{
+                background: $blush;
+            }
+        }
+
+        &.active{
+            div{
+                &::after{
+                    position: absolute;
+                    font-size: 14px;
+                    color: $white;
+                    top: 7px;
+                    left: 11px;
+                    content: '\f087';
+                    font-family: 'FontAwesome';
+                }
+            }
+        }
+	}
+}
+
