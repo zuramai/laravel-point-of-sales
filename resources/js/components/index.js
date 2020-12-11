@@ -3,6 +3,7 @@ import Card from './Card'
 import Child from './Child'
 import Button from './Button'
 import Checkbox from './Checkbox'
+import LineChart from './Chart/LineChart'
 import { HasError, AlertError, AlertSuccess } from 'vform'
 
 // Components that are registered globaly.
@@ -13,7 +14,8 @@ import { HasError, AlertError, AlertSuccess } from 'vform'
   Checkbox,
   HasError,
   AlertError,
-  AlertSuccess
+  AlertSuccess,
+  LineChart
 ].forEach(Component => {
   Vue.component(Component.name, Component)
 })

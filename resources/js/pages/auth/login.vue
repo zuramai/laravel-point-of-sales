@@ -1,53 +1,35 @@
 <template>
-  <div class="row">
-    <div class="col-lg-8 m-auto">
-      <card :title="$t('login')">
-        <form @submit.prevent="login" @keydown="form.onKeydown($event)">
-          <!-- Email -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('username') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.username" :class="{ 'is-invalid': form.errors.has('username') }" class="form-control" type="text" name="username">
-              <has-error :form="form" field="username" />
+  <div class="card">
+    <div class="auth_brand">
+        <a class="navbar-brand" href="javascript:void(0);"><i class="fa fa-cube font-25"></i> Laravel POS</a>
+    </div>
+    <div class="body">
+        <p class="lead">Login to your account</p>
+        <form class="form-auth-small m-t-20" @submit.prevent="login" @keydown="form.onKeydown($event)">
+            <div class="form-group">
+                <label for="signin-username" class="control-label sr-only">{{ $t('username') }}</label>
+                <input type="username" v-model="form.username" :class="{ 'is-invalid': form.errors.has('username') }" class="form-control round" id="signin-username" placeholder="Username">
+                <has-error :form="form" field="username" />
             </div>
-          </div>
-
-          <!-- Password -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
-              <has-error :form="form" field="password" />
+            <div class="form-group">
+                <label for="signin-password" class="control-label sr-only">{{ $t('password') }}</label>
+                <input type="password"  v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control round" id="signin-password" value="thisisthepassword" placeholder="Password">
+                <has-error :form="form" field="password" />
             </div>
-          </div>
-
-          <!-- Remember Me -->
-          <div class="form-group row">
-            <div class="col-md-3" />
-            <div class="col-md-7 d-flex">
-              <checkbox v-model="remember" name="remember">
-                {{ $t('remember_me') }}
-              </checkbox>
-
-              <router-link :to="{ name: 'password.request' }" class="small ml-auto my-auto">
-                {{ $t('forgot_password') }}
-              </router-link>
+            <div class="form-group clearfix">
+                <label class="fancy-checkbox element-left">
+                    <input type="checkbox">
+                    <span>Remember me</span>
+                </label>								
             </div>
-          </div>
-
-          <div class="form-group row">
-            <div class="col-md-7 offset-md-3 d-flex">
-              <!-- Submit Button -->
-              <v-button :loading="form.busy">
-                {{ $t('login') }}
-              </v-button>
-
-              <!-- GitHub Login Button -->
-              <login-with-github />
-            </div>
-          </div>
+            <v-button :loading="form.busy" :block="true" :round="true">
+              {{ $t('login') }}
+            </v-button>
+            <!-- <div class="bottom">
+                <span class="helper-text m-b-10"><i class="fa fa-lock"></i> <a href="page-forgot-password.html">Forgot password?</a></span>
+                <span>Don't have an account? <a href="page-register.html">Register</a></span>
+            </div> -->
         </form>
-      </card>
     </div>
   </div>
 </template>
@@ -61,6 +43,7 @@ export default {
   components: {
     LoginWithGithub
   },
+  layout:'auth',
 
   middleware: 'guest',
 

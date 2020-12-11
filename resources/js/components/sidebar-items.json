@@ -1,0 +1,51 @@
+[
+    {
+        "name": "menu_dashboard",
+        "icon": "icon-speedometer",
+        "url": "/home"
+    },
+    {
+        "name": "menu_transaction",
+        "icon": "icon-paper-plane",
+        "url": "/transaction/new"
+    },
+    {
+        "type": "header",
+        "name": "menu_master_data"
+    },
+    {
+        "name": "menu_products",
+        "icon": "icon-handbag",
+        "url": "/master/products"
+    },
+    {
+        "name": "menu_all_transaction",
+        "icon": "icon-basket-loaded",
+        "url": "/master/transactions"
+    },
+    {
+        "name": "menu_category",
+        "icon": "icon-tag",
+        "url": "/master/categories"
+    },
+    {
+        "name": "menu_discount",
+        "icon": "icon-magic-wand",
+        "url": "/master/discount"
+    },
+    {
+        "name": "menu_users",
+        "icon": "icon-user",
+        "url": "/master/users"
+    },
+    {
+        "name": "menu_customers",
+        "icon": "icon-user-following",
+        "url": "/master/customers"
+    },
+    {
+        "name": "menu_report",
+        "icon": "icon-calculator",
+        "url": "/master/report"
+    }
+]

@@ -36,5 +36,16 @@
   "send_verification_link": "Send Verification Link",
   "resend_verification_link": "Resend Verification Link ?",
   "failed_to_verify_email": "Failed to verify email.",
-  "verify_email_address": "We sent you an email with an the verification link."
+  "verify_email_address": "We sent you an email with an the verification link.",
+
+  "menu_master_data": "Master Data",
+  "menu_dashboard": "Dashboard",
+  "menu_transaction": "New Transaction",
+  "menu_all_transaction": "All Transaction",
+  "menu_category": "Category",
+  "menu_discount":"Discount",
+  "menu_users":"Users",
+  "menu_customers":"Customers",
+  "menu_products":"Products",
+  "menu_report":"Report"
 }

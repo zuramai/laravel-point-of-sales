@@ -98,9 +98,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="body">
+                    <div class="body" style="height: min-height: 350px">
                         <small class="text-muted">Sales Performance for Online and Offline Revenue</small>
-                        <div id="flotChart" class="flot-chart"></div>
+                        <line-chart :chartData="sales.chartData" :options="sales.options" :height="300"></line-chart>
                     </div>
                 </div>
             </div>
@@ -252,7 +252,36 @@
 <script>
 export default {
   middleware: 'auth',
+    data: () => ({
+        sales: {
+            chartData : {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+                datasets: [{
+                    backgroundColor: "rgba(57, 91, 182,.5)",
+                    label: 'series-real',
+                    data: [200, 380, 320, 320],
+                }, {
+                    backgroundColor: "rgba(92, 182, 95,.5)",
+                    label: 'series-projection',
+                    data: [240, 280, 360, 380],
+                }]
+            },
+            options: {
+                lineSmooth: false,
+                low: 0,
+                high: 'auto',
+                tooltips: {
+                    mode: 'nearest'
+                },
+                options: {
+                    legend: false,
+                },
+                responsive: true,
+                maintainAspectRatio:false,
 
+            }
+        }
+    }),
   metaInfo () {
     return { title: this.$t('home') }
   },
