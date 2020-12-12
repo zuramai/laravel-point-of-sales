@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->text('phone');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $table->enum('level',['Admin','Kasir']);
+            $table->enum('role',['admin','kasir']);
             $table->string('image_name');
             $table->rememberToken();
             $table->timestamps();

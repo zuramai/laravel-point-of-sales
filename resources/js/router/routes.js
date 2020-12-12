@@ -3,7 +3,7 @@ function page (path) {
 }
 
 export default [
-  { path: '/', name: 'welcome', component: page('welcome.vue') },
+  { path: '/', redirect: {name: 'login'} },
 
   { path: '/login', name: 'login', component: page('auth/login.vue') },
   { path: '/register', name: 'register', component: page('auth/register.vue') },
@@ -20,6 +20,13 @@ export default [
       { path: '', redirect: { name: 'settings.profile' } },
       { path: 'profile', name: 'settings.profile', component: page('settings/profile.vue') },
       { path: 'password', name: 'settings.password', component: page('settings/password.vue') }
+    ]
+  },
+  {
+    path: '/master',
+    component: page('master/index.vue'),
+    children: [
+      { path: 'products', name: "master.product", component: page('master/products.vue')  }
     ]
   },
 

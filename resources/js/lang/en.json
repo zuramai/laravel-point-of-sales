@@ -47,5 +47,7 @@
   "menu_users":"Users",
   "menu_customers":"Customers",
   "menu_products":"Products",
-  "menu_report":"Report"
+  "menu_report":"Report",
+
+  "page_products_title": "Products"
 }

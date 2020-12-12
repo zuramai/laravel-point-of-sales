@@ -19,63 +19,51 @@
 
     <div class="container-fluid">
         <div class="row clearfix">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="body">
-                        <div class="w_summary">
-                            <div class="s_chart">
-                                <span class="chart">5,2,3,6,9,8,4,1,2,8</span>
-                            </div>
-                            <div class="s_detail">
-                                <h2 class="font700 mb-0">$15K</h2>
-                                <span>67% <i class="fa fa-level-up text-success"></i> Total income</span>
-                            </div>
-                        </div>
+                        <div class="card-value float-right text-blue">+5%</div>
+                        <h4 class="mb-1">423</h4>
+                        <div class="text-muted">Paid Traffic</div>
+                    </div>
+                    <div class="card-chart-bg">
+                        <div id="chart-bg-users-1" style="height: 60px"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="body">
-                        <div class="w_summary">
-                            <div class="s_chart">
-                                <span class="chart">6,3,2,5,8,9,5,4,2,3</span>
-                            </div>
-                            <div class="s_detail">
-                                <h2 class="font700 mb-0">$1258</h2>
-                                <span>15% <i class="fa fa-level-up text-success"></i> Total Expense</span>
-                            </div>
-                        </div>
+                        <div class="card-value float-right text-red">-3%</div>
+                        <h4 class="mb-1">423</h4>
+                        <div class="text-muted">Organic Traffic</div>
+                    </div>
+                    <div class="card-chart-bg">
+                        <div id="chart-bg-users-2" style="height: 60px"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="body">
-                        <div class="w_summary">
-                            <div class="s_chart">
-                                <span class="chart">3,5,1,6,2,4,8,5,3,2</span>
-                            </div>
-                            <div class="s_detail">
-                                <h2 class="font700 mb-0">$2315</h2>
-                                <span>23% <i class="fa fa-level-up text-success"></i> Total Growth</span>
-                            </div>
-                        </div>
+                        <div class="card-value float-right text-green">-3%</div>
+                        <h4 class="mb-1">423</h4>
+                        <div class="text-muted">Daily Visits</div>
+                    </div>
+                    <div class="card-chart-bg">
+                        <div id="chart-bg-users-3" style="height: 60px"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-sm-6 col-lg-3">
                 <div class="card">
                     <div class="body">
-                        <div class="w_summary">
-                            <div class="s_chart">
-                                <span class="chart">8,5,2,9,6,3,4,5,6,7</span>
-                            </div>
-                            <div class="s_detail">
-                                <h2 class="font700 mb-0">$1025</h2>
-                                <span>52% <i class="fa fa-level-up text-success"></i> Bounce Rate</span>
-                            </div>
-                        </div>
+                        <div class="card-value float-right text-yellow">9%</div>
+                        <h4 class="mb-1">423</h4>
+                        <div class="text-muted">Conversion Rate</div>
+                    </div>
+                    <div class="card-chart-bg">
+                        <div id="chart-bg-users-4" style="height: 60px"></div>
                     </div>
                 </div>
             </div>
@@ -104,25 +92,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <div class="header">
-                        <h2>Page Views(Avg)</h2>
-                    </div>
-                    <div class="body text-center">
-                        <h4>6.25</h4>
-                        <p class="mb-2"><span><i class="fa fa-caret-up text-success ml-1"></i> +1.12</span> vs last month (4.0)</p>
-                        <div id="Page_Views" style="height: 140px"></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="body">
-                        <div class="card-value float-right text-muted"><i class="icon-bubbles"></i></div>
-                        <h3 class="mb-1">2,54,021</h3>
-                        <div>Total Clicks</div>
-                    </div>
-                </div>
-            </div> -->
             <div class="col-lg-3 col-md-6">
                 <div class="card">
                     <div class="header">
@@ -145,8 +114,6 @@
                 </div>
             </div>                
         </div>
-
-
         <div class="row clearfix">
             <div class="col-12 col-sm-12">
                 <div class="card">
@@ -251,7 +218,7 @@
 
 <script>
 export default {
-  middleware: 'auth',
+    middleware: 'auth',
     data: () => ({
         sales: {
             chartData : {
@@ -282,44 +249,264 @@ export default {
             }
         }
     }),
-  metaInfo () {
-    return { title: this.$t('home') }
-  },
-  mounted() {
-    this.initOrderStatusChart()
-  },
-  methods: {
-    initOrderStatusChart() {
-      var chart = c3.generate({
-          bindto: '#Order_status', // id of chart wrapper
-          data: {
-              columns: [
-                  // each columns data
-                  ['data1', 63],
-                  ['data2', 37]
-                  ],
-                  type: 'donut', // default type of chart
-                  colors: {
-                      'data1': '#5CB65F',
-                      'data2': '#395bb6',
-                  },
-                  names: {
-                      // name of each serie
-                      'data1': 'This Month',
-                      'data2': 'Last Month'
-                  }
-              },
-              axis: {
-              },
-              legend: {
-                  show: false, //hide legend
-              },
-              padding: {
-                  bottom: 20,
-                  top: 0
-              },
-      });
+    metaInfo () {
+        return { title: this.$t('home') }
     },
-  }
+    mounted() {
+        this.initOrderStatusChart()
+        this.initCardChart()
+    },
+    methods: {
+        initOrderStatusChart() {
+        var chart = c3.generate({
+            bindto: '#Order_status', // id of chart wrapper
+            data: {
+                columns: [
+                    // each columns data
+                    ['data1', 63],
+                    ['data2', 37]
+                    ],
+                    type: 'donut', // default type of chart
+                    colors: {
+                        'data1': '#5CB65F',
+                        'data2': '#395bb6',
+                    },
+                    names: {
+                        // name of each serie
+                        'data1': 'This Month',
+                        'data2': 'Last Month'
+                    }
+                },
+                axis: {
+                },
+                legend: {
+                    show: false, //hide legend
+                },
+                padding: {
+                    bottom: 20,
+                    top: 0
+                },
+        });
+        },
+        initCardChart() {
+            var chart = c3.generate({
+            bindto: '#chart-bg-users-1',
+            padding: {
+                bottom: -10,
+                left: -1,
+                right: -1
+            },
+            data: {
+                names: {
+                    data1: 'Users online'
+                },
+                columns: [
+                    ['data1', 30, 40, 10, 40, 12, 22, 40]
+                ],
+                type: 'area'
+            },
+            legend: {
+                show: false
+            },
+            transition: {
+                duration: 0
+            },
+            point: {
+                show: false
+            },
+            tooltip: {
+                format: {
+                    title: function (x) {
+                        return '';
+                    }
+                }
+            },
+            axis: {
+                y: {
+                    padding: {
+                        bottom: 0,
+                    },
+                    show: false,
+                    tick: {
+                        outer: false
+                    }
+                },
+                x: {
+                    padding: {
+                        left: 0,
+                        right: 0
+                    },
+                    show: false
+                }
+            },
+            color: {
+                pattern: ['#5978ec']
+            }
+        });
+        var chart = c3.generate({
+            bindto: '#chart-bg-users-2',
+            padding: {
+                bottom: -10,
+                left: -1,
+                right: -1
+            },
+            data: {
+                names: {
+                    data1: 'Users online'
+                },
+                columns: [
+                    ['data1', 30, 40, 10, 40, 12, 22, 40]
+                ],
+                type: 'area'
+            },
+            legend: {
+                show: false
+            },
+            transition: {
+                duration: 0
+            },
+            point: {
+                show: false
+            },
+            tooltip: {
+                format: {
+                    title: function (x) {
+                        return '';
+                    }
+                }
+            },
+            axis: {
+                y: {
+                    padding: {
+                        bottom: 0,
+                    },
+                    show: false,
+                    tick: {
+                        outer: false
+                    }
+                },
+                x: {
+                    padding: {
+                        left: 0,
+                        right: 0
+                    },
+                    show: false
+                }
+            },
+            color: {
+                pattern: ['#e74c3c']
+            }
+        });
+        var chart = c3.generate({
+            bindto: '#chart-bg-users-3',
+            padding: {
+                bottom: -10,
+                left: -1,
+                right: -1
+            },
+            data: {
+                names: {
+                    data1: 'Users online'
+                },
+                columns: [
+                    ['data1', 30, 40, 10, 40, 12, 22, 40]
+                ],
+                type: 'area'
+            },
+            legend: {
+                show: false
+            },
+            transition: {
+                duration: 0
+            },
+            point: {
+                show: false
+            },
+            tooltip: {
+                format: {
+                    title: function (x) {
+                        return '';
+                    }
+                }
+            },
+            axis: {
+                y: {
+                    padding: {
+                        bottom: 0,
+                    },
+                    show: false,
+                    tick: {
+                        outer: false
+                    }
+                },
+                x: {
+                    padding: {
+                        left: 0,
+                        right: 0
+                    },
+                    show: false
+                }
+            },
+            color: {
+                pattern: ['#ff9f24']
+            }
+        });
+        var chart = c3.generate({
+            bindto: '#chart-bg-users-4',
+            padding: {
+                bottom: -10,
+                left: -1,
+                right: -1
+            },
+            data: {
+                names: {
+                    data1: 'Users online'
+                },
+                columns: [
+                    ['data1', 30, 40, 10, 40, 12, 22, 40]
+                ],
+                type: 'area'
+            },
+            legend: {
+                show: false
+            },
+            transition: {
+                duration: 0
+            },
+            point: {
+                show: false
+            },
+            tooltip: {
+                format: {
+                    title: function (x) {
+                        return '';
+                    }
+                }
+            },
+            axis: {
+                y: {
+                    padding: {
+                        bottom: 0,
+                    },
+                    show: false,
+                    tick: {
+                        outer: false
+                    }
+                },
+                x: {
+                    padding: {
+                        left: 0,
+                        right: 0
+                    },
+                    show: false
+                }
+            },
+            color: {
+                pattern: ['#f1c40f']
+            }
+        });
+
+        }
+    }
 }
 </script>
