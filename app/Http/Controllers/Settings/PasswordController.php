@@ -19,8 +19,12 @@ class PasswordController extends Controller
             'password' => 'required|confirmed|min:6',
         ]);
 
-        $request->user()->update([
-            'password' => bcrypt($request->password),
-        ]);
+        try {
+            $request->user()->update([
+                'password' => bcrypt($request->password),
+            ]);
+        } catch (\Exception $e) {
+            dd("Error: data tidak dapat diperoleh. {$e->getMessage()}");
+        }
     }
 }
